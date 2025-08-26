@@ -13,7 +13,7 @@ const resend = new Resend(process.env.RESEND_API_KEY); // <-- Inisialisasi Resen
 const contactSchema = z.object({
     name: z.string().min(3, { message: "Nama harus lebih dari 2 karakter." }),
     email: z.string().email({ message: "Format email tidak valid." }),
-    message: z.string().min(5, { message: "Pesan harus lebih dari 10 karakter." }),
+    message: z.string().min(5, { message: "Pesan harus lebih dari 5 karakter." }),
 });
 
 export type ContactFormState = {
