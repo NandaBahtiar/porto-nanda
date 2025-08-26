@@ -1,6 +1,7 @@
 import prisma from '@/lib/prisma';
 import ButtonDelete from "@/app/components/ButtonDelete";
 import Chackbox from "@/app/components/ Chackbox";
+import { revalidatePath } from 'next/cache';
 
 // Komponen Tombol Hapus (didefinisikan di file yang sama)
 // Ini adalah Client Component karena menggunakan event handler `onClick`,
@@ -34,7 +35,7 @@ import Chackbox from "@/app/components/ Chackbox";
 export default async function DashboardPage() {
     const submissions = await prisma.contactSubmission.findMany({
         orderBy: { createdAt: 'desc' },
-    });
+    }); revalidatePath('/dashboard');
 
     
 
