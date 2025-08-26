@@ -1,5 +1,4 @@
 import React from 'react'
-import AuthButton from "@/app/components/AuthButton";
 
 const Footer = () => {
     return (

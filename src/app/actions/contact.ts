@@ -4,7 +4,6 @@ import { PrismaClient } from '@/generated/prisma';
 import { z } from 'zod';
 import { revalidatePath } from "next/cache";
 import { Resend } from 'resend';
-import { NewMessageEmail } from '@/app/components/emails/NewMessageEmail';
 import {EmailTemplate} from "@/app/components/emails/EmailTemplate"; // <-- Impor template email
 
 const prisma = new PrismaClient();

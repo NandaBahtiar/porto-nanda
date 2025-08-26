@@ -1,5 +1,4 @@
 import prisma from '@/lib/prisma';
-import { revalidatePath } from 'next/cache';
 import ButtonDelete from "@/app/components/ButtonDelete";
 import Chackbox from "@/app/components/ Chackbox";
 
@@ -37,9 +36,7 @@ export default async function DashboardPage() {
         orderBy: { createdAt: 'desc' },
     });
 
-    function handleChange() {
-        console.log("ini")
-    }
+    
 
     return (
         <div className="container mx-auto p-8">
